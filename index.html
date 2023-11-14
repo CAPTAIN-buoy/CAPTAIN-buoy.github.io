@@ -4,107 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAPTAIN</title>
-</head>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    color: white;
-  }
-  .tab-container {
-    width: 100%;
-  }
-  .tab {
-    display: none;
-  }
-  .tab-labels_title {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 26px;
-  }
-  .tab-label_title {
-    cursor: pointer;
-    flex: 1;
-    padding: 10px 20px;
-    text-align: center;
-    background-color: #000000;
-    color: white;
-    border: 1px solid black;
-    font-weight: bold;
-  }
-  .active-tab {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .grid-container-1x1 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-  .grid-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .grid-item:hover {
-    transform: scale(1.1);
-  }
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-  }
-  .grid-item-logo {
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .grid-item-logo:hover {
-    transform: scale(1.1);
-  }
-  .grid-item-logo img {
-    max-width: 70%;
-    height: auto;
-  }
-</style>
-<body>
-<div class="tab-container">
-  <div class="tab-labels_title">
-    <div class="tab-label_title"> CAPTAIN</div>
-    <div class="grid-item-logo"><img src="/logos.jpg" alt="LOGOS"></div>
-  </div>
-  <div class="tab" id="tab1">
-      <div class="grid-container">
-        <div class="grid-item">
-            <a href="https://raw.githubusercontent.com/OPT4CYANproject/OPT4CYAN_Control/main/Plots/Santa_Olalla/Rrs/today.jpg" target="_blank">
-                <img src="https://raw.githubusercontent.com/OPT4CYANproject/OPT4CYAN_Control/main/Plots/Santa_Olalla/Rrs/today.jpg" alt="Florimety">
-             </a>
-        </div>
-      </div>
-  </div>
-  <script>
-    function changeTab(tabIndex) {
-      const tabs = document.querySelectorAll('.tab');
-      const tabLabels = document.querySelectorAll('.tab-label');
-      
-      tabs.forEach(tab => tab.style.display = 'none');
-      tabLabels.forEach(label => label.classList.remove('active-tab'));
-      
-      tabs[tabIndex].style.display = 'block';
-      tabLabels[tabIndex].classList.add('active-tab');
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: white;
+        }
 
-    // Mostrar la primera pestaña por defecto al cargar la página
-    changeTab(0);
-  </script>
+        .tab-container {
+            width: 100%;
+        }
+
+        .tab {
+            display: none;
+        }
+
+        .tab-labels_title {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        .tab-label {
+            cursor: pointer;
+            flex: 1;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #9af59d;
+            color: black;
+            border: 1px solid black;
+        }
+
+        .tab-label_title {
+            cursor: pointer;
+            flex: 1;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #000000;
+            color: white;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+
+        .active-tab {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.1);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .grid-item-logo {
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .grid-item-logo img {
+            max-width: 70%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-container">
+        <div class="tab-labels_title">
+            <div class="tab-label_title"> CAPTAIN</div>
+            <div class="grid-item-logo"><img src="/logos.jpg" alt="LOGOS"></div>
+        </div>
+        <div class="tab" id="tab1">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <a href="https://raw.githubusercontent.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/main/Output/plot.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/main/Output/plot.jpg" alt="Florimety">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function changeTab(tabIndex) {
+                const tabs = document.querySelectorAll('.tab');
+                const tabLabels = document.querySelectorAll('.tab-label');
+
+                tabs.forEach(tab => tab.style.display = 'none');
+                tabLabels.forEach(label => label.classList.remove('active-tab'));
+
+                tabs[tabIndex].style.display = 'block';
+                tabLabels[tabIndex].classList.add('active-tab');
+            }
+
+            // Mostrar la primera pestaña por defecto al cargar la página
+            changeTab(0);
+        </script>
+    </div>
 </body>
 </html>
+
 

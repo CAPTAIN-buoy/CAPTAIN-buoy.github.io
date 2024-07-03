@@ -12,8 +12,24 @@
             background-repeat: no-repeat; /* Evita que la imagen se repita */
             background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
             color: white;
+            margin: 0; /* Elimina el margen por defecto del body */
+            padding: 0; /* Elimina el relleno por defecto del body */
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
+        .footer img {
+            max-width: 100px; /* Ajusta el tamaño máximo del logo */
+            height: auto;
+            margin-top: 5px; /* Ajusta el margen superior del logo */
+        }
         .tab-container {
             width: 100%;
         }
@@ -82,17 +98,6 @@
             max-width: 70%;
             height: auto;
         }
-        /* Estilos para los logos */
-        .logos-container {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 30%;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para destacar los logos */
-            padding: 20px 0;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -106,13 +111,9 @@
                 </a>
             </div>
         </div>
-    
-    <div class="logos-container">
-        <a href="ruta_logo1">
-            <img src="https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Logos/logos.png" alt="Logo 1">
-        </a>
+    <div class="footer">
+        <img src=""https://github.com/CAPTAIN-buoy/CAPTAIN-buoy.github.io/raw/main/Logos/logos.png"" alt="Logo">
     </div>
-    
         <script>
             function changeTab(tabIndex) {
                 const tabs = document.querySelectorAll('.tab');
